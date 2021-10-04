@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "b0ad24f4-684b-4ef4-b564-c44ca7811ae4",
+		"name": "Pessoa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET TODAS PESSOAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pessoas",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PESSOA POR UUID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pessoas/:uuid",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pessoas",
+						":uuid"
+					],
+					"variable": [
+						{
+							"key": "uuid",
+							"value": "f8df91f5-30b8-43e9-a440-087b748060ec"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
