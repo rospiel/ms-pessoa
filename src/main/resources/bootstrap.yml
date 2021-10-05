@@ -1,3 +1,10 @@
 spring:
   application:
     name: ms-pessoa
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+  profiles:
+    active: default
