@@ -1,6 +1,7 @@
 package br.com.application.entrypoints.mapper;
 
 import br.com.application.dataproviders.entities.Pessoa;
+import br.com.application.entrypoints.dtos.PessoaRequest;
 import br.com.application.entrypoints.dtos.PessoaResponse;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +21,16 @@ public class PessoaMapper {
         response.setUuid(entidade.getUuid());
         response.setSalarioDia(entidade.getSalarioDia());
         return response;
+    }
+
+    public Pessoa mapPessoa(PessoaRequest request) {
+        if (isNull(request)) {
+            return null;
+        }
+
+        return Pessoa.builder()
+                .nome(request.getNome())
+                .salarioDia(request.getSalarioDia())
+                .build();
     }
 }
